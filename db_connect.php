@@ -1,12 +1,6 @@
 <?php
 
-if($_SERVER["REQUEST_METHOD"] == "POST"){
 
-    $name = $_POST['name'];
-    $color = $_POST['color'];
-    $porte = $_POST['porte'];
-    $image = $_POST['image'];
-var_dump($_POST);
 
     $link = mysqli_connect("localhost", "root","", "voiture");
 
@@ -15,11 +9,8 @@ var_dump($_POST);
     if (mysqli_connect_errno()) {
         printf("Échec de la connexion : %s\n", mysqli_connect_error());
     }
+    //  else {
+    //     echo "Connexion résussie";
+    // }
 
-        //code qui execute ma requête
-    if (mysqli_query($link,$sqli)){
-        echo "donnée envoyé";
-    }else {
-        echo "non envoyé";
-    }
-}
+
